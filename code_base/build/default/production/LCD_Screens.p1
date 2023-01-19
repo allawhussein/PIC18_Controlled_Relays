@@ -564,15 +564,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _Place3 `i ~T0 @X0 1 e ]
 [v _Place4 `i ~T0 @X0 1 e ]
 "94
-[; ;./App_Functions.h: 94: uint8_t flag = 0;
-[v _flag `uc ~T0 @X0 1 e ]
-[i _flag
+[; ;./App_Functions.h: 94: uint8_t flag1 = 0;
+[v _flag1 `uc ~T0 @X0 1 e ]
+[i _flag1
 -> -> 0 `i `uc
 ]
-[v F4187 `uc ~T0 @X0 -> 8 `i t ]
-"96
-[; ;./App_Functions.h: 96: char time1[4][8]={
-[v _time1 `F4187 ~T0 @X0 -> 4 `i e ]
+"95
+[; ;./App_Functions.h: 95: uint8_t flag2 = 0;
+[v _flag2 `uc ~T0 @X0 1 e ]
+[i _flag2
+-> -> 0 `i `uc
+]
+[v F4188 `uc ~T0 @X0 -> 8 `i t ]
+"97
+[; ;./App_Functions.h: 97: char time1[4][8]={
+[v _time1 `F4188 ~T0 @X0 -> 4 `i e ]
 [i _time1
 :U ..
 :U ..

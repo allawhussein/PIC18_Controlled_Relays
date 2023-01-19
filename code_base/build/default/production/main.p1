@@ -673,15 +673,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _Place3 `i ~T0 @X0 1 e ]
 [v _Place4 `i ~T0 @X0 1 e ]
 "94
-[; ;./App_Functions.h: 94: uint8_t flag = 0;
-[v _flag `uc ~T0 @X0 1 e ]
-[i _flag
+[; ;./App_Functions.h: 94: uint8_t flag1 = 0;
+[v _flag1 `uc ~T0 @X0 1 e ]
+[i _flag1
 -> -> 0 `i `uc
 ]
-[v F4187 `uc ~T0 @X0 -> 8 `i t ]
-"96
-[; ;./App_Functions.h: 96: char time1[4][8]={
-[v _time1 `F4187 ~T0 @X0 -> 4 `i e ]
+"95
+[; ;./App_Functions.h: 95: uint8_t flag2 = 0;
+[v _flag2 `uc ~T0 @X0 1 e ]
+[i _flag2
+-> -> 0 `i `uc
+]
+[v F4188 `uc ~T0 @X0 -> 8 `i t ]
+"97
+[; ;./App_Functions.h: 97: char time1[4][8]={
+[v _time1 `F4188 ~T0 @X0 -> 4 `i e ]
 [i _time1
 :U ..
 :U ..
@@ -783,11 +789,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 33:     Active_Receiver_Interrupt();
 [e ( _Active_Receiver_Interrupt ..  ]
 "37
-[; ;main.c: 37:     RTC_Set_Time(30, 30, 12);
-[e ( _RTC_Set_Time (3 , , -> -> 30 `i `uc -> -> 30 `i `uc -> -> 12 `i `uc ]
+[; ;main.c: 37:     RTC_Set_Time(30, 10, 2);
+[e ( _RTC_Set_Time (3 , , -> -> 30 `i `uc -> -> 10 `i `uc -> -> 2 `i `uc ]
 "38
-[; ;main.c: 38:     RTC_Set_Date(5, 30, 12, 22);
-[e ( _RTC_Set_Date (4 , , , -> -> 5 `i `uc -> -> 30 `i `uc -> -> 12 `i `uc -> -> 22 `i `uc ]
+[; ;main.c: 38:     RTC_Set_Date(3, 3, 1, 23);
+[e ( _RTC_Set_Date (4 , , , -> -> 3 `i `uc -> -> 3 `i `uc -> -> 1 `i `uc -> -> 23 `i `uc ]
 "41
 [; ;main.c: 41:     for(char i=0; i<32; i++)
 {
@@ -912,28 +918,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 73:             {
 {
 "74
-[; ;main.c: 74:                 case 65: (PORTB |= (1<<6)); flag = 1; break;
+[; ;main.c: 74:                 case 65: (PORTB |= (1<<6)); flag1 = 1; break;
 [e :U 396 ]
 [e =| _PORTB -> << -> 1 `i -> 6 `i `Vuc ]
-[e = _flag -> -> 1 `i `uc ]
+[e = _flag1 -> -> 1 `i `uc ]
 [e $U 394  ]
 "75
-[; ;main.c: 75:                 case 66: (PORTB &=~(1<<6)); flag = 0; break;
+[; ;main.c: 75:                 case 66: (PORTB &=~(1<<6)); flag1 = 0; break;
 [e :U 397 ]
 [e =& _PORTB -> ~ << -> 1 `i -> 6 `i `Vuc ]
-[e = _flag -> -> 0 `i `uc ]
+[e = _flag1 -> -> 0 `i `uc ]
 [e $U 394  ]
 "76
-[; ;main.c: 76:                 case 67: (PORTB |= (1<<7)); flag = 1; break;
+[; ;main.c: 76:                 case 67: (PORTB |= (1<<7)); flag2 = 1; break;
 [e :U 398 ]
 [e =| _PORTB -> << -> 1 `i -> 7 `i `Vuc ]
-[e = _flag -> -> 1 `i `uc ]
+[e = _flag2 -> -> 1 `i `uc ]
 [e $U 394  ]
 "77
-[; ;main.c: 77:                 case 68: (PORTB &=~(1<<7)); flag = 0; break;
+[; ;main.c: 77:                 case 68: (PORTB &=~(1<<7)); flag2 = 0; break;
 [e :U 399 ]
 [e =& _PORTB -> ~ << -> 1 `i -> 7 `i `Vuc ]
-[e = _flag -> -> 0 `i `uc ]
+[e = _flag2 -> -> 0 `i `uc ]
 [e $U 394  ]
 "78
 [; ;main.c: 78:                 default: ;

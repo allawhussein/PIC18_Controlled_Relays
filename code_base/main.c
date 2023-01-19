@@ -34,8 +34,8 @@ void main(void) {
     
     //RTC_Set_Time(decToBcd(30), decToBcd(30), decToBcd(8));
     //RTC_Set_Date(decToBcd(5), decToBcd(30), decToBcd(12), decToBcd(22));
-    RTC_Set_Time(30, 30, 12);
-    RTC_Set_Date(5, 30, 12, 22);
+    RTC_Set_Time(30, 10, 2);
+    RTC_Set_Date(3, 3, 1, 23);
     
     
     for(char i=0; i<32; i++)
@@ -71,10 +71,10 @@ void main(void) {
         {
             switch (Destination)
             {
-                case 65: SET_PIN(PORTB, 6);   flag = 1;   break;
-                case 66: CLEAR_PIN(PORTB, 6); flag = 0;   break;
-                case 67: SET_PIN(PORTB, 7);   flag = 1;   break;
-                case 68: CLEAR_PIN(PORTB, 7); flag = 0;   break;
+                case 65: SET_PIN(PORTB, 6);   flag1 = 1;   break;
+                case 66: CLEAR_PIN(PORTB, 6); flag1 = 0;   break;
+                case 67: SET_PIN(PORTB, 7);   flag2 = 1;   break;
+                case 68: CLEAR_PIN(PORTB, 7); flag2 = 0;   break;
                 default: ;
             }
             Destination = 0;

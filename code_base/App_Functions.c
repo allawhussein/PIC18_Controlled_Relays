@@ -92,14 +92,14 @@ void Action()
     mask[0]=1;
   }
    
-  if(total2[0]>total&&mask[0]==1)
+  if( (total2[0]>total&&mask[0]==1) || flag1) 
   {
     //This part you can Add as you want to execute it
     SET_PIN(PORTB, 6);// ****************
   }
   else
   {
-     if(!flag)
+     if(!flag1)
      {
          CLEAR_PIN(PORTB, 6);// *****************
          mask[0]=0;
@@ -113,13 +113,13 @@ void Action()
     mask[1]=1;
   }
    
-  if(total2[2]>total&&mask[1]==1)
+  if( (total2[2]>total&&mask[1]==1) || flag2)
   {
     //This part you can Add as you want to execute it
     SET_PIN(PORTB, 7);  // ****************
   }else
   {
-      if(!flag)
+      if(!flag2)
       {
          CLEAR_PIN(PORTB, 7);  // *****************
          mask[1]=0; 

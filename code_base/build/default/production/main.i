@@ -6442,7 +6442,8 @@ uint8_t hour2[4], min2[4], sec2[4];
 uint32_t total, total1[4], total2[4];
 int mask[2];
 int Place1, Place2, Place3, Place4;
-uint8_t flag = 0;
+uint8_t flag1 = 0;
+uint8_t flag2 = 0;
 
 char time1[4][8]={
     {'0','0',':','0','0',':','0','0'},
@@ -6501,8 +6502,8 @@ void main(void) {
 
 
 
-    RTC_Set_Time(30, 30, 12);
-    RTC_Set_Date(5, 30, 12, 22);
+    RTC_Set_Time(30, 10, 2);
+    RTC_Set_Date(3, 3, 1, 23);
 
 
     for(char i=0; i<32; i++)
@@ -6538,10 +6539,10 @@ void main(void) {
         {
             switch (Destination)
             {
-                case 65: (PORTB |= (1<<6)); flag = 1; break;
-                case 66: (PORTB &=~(1<<6)); flag = 0; break;
-                case 67: (PORTB |= (1<<7)); flag = 1; break;
-                case 68: (PORTB &=~(1<<7)); flag = 0; break;
+                case 65: (PORTB |= (1<<6)); flag1 = 1; break;
+                case 66: (PORTB &=~(1<<6)); flag1 = 0; break;
+                case 67: (PORTB |= (1<<7)); flag2 = 1; break;
+                case 68: (PORTB &=~(1<<7)); flag2 = 0; break;
                 default: ;
             }
             Destination = 0;

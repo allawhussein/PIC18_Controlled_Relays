@@ -6392,7 +6392,8 @@ uint8_t hour2[4], min2[4], sec2[4];
 uint32_t total, total1[4], total2[4];
 int mask[2];
 int Place1, Place2, Place3, Place4;
-uint8_t flag = 0;
+uint8_t flag1 = 0;
+uint8_t flag2 = 0;
 
 char time1[4][8]={
     {'0','0',':','0','0',':','0','0'},
@@ -6493,7 +6494,7 @@ void Action()
   }
   else
   {
-     if(!flag)
+     if(!flag1)
      {
          (PORTB &=~(1<<6));
          mask[0]=0;
@@ -6513,7 +6514,7 @@ void Action()
     (PORTB |= (1<<7));
   }else
   {
-      if(!flag)
+      if(!flag2)
       {
          (PORTB &=~(1<<7));
          mask[1]=0;

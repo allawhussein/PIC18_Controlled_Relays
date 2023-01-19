@@ -11,13 +11,13 @@
  Intel Hex-file ranges:
   0h - 3h		(dist/default/production\PIC18_RTC_LCD.X.production.hex)
   8h - 11h		(dist/default/production\PIC18_RTC_LCD.X.production.hex)
-  800h - 4753h		(dist/default/production\PIC18_RTC_LCD.X.production.hex)
+  800h - 475Bh		(dist/default/production\PIC18_RTC_LCD.X.production.hex)
   200000h - 200007h		(dist/default/production\PIC18_RTC_LCD.X.production.hex)
   300000h - 30000Dh		(dist/default/production\PIC18_RTC_LCD.X.production.hex)
  Unused ranges:
   4h - 7h
   12h - 7FFh
-  4754h - 1FFFFFh
+  475Ch - 1FFFFFh
   200008h - 2FFFFFh
 
 ### Hex Memory Map ###
@@ -1043,7 +1043,7 @@
 00004720 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00004730 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00004740 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00004750 | H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- --
+00004750 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- --
 ----------------------------------------------------------
 00200000 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
 ----------------------------------------------------------
